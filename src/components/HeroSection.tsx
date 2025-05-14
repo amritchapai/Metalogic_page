@@ -4,10 +4,27 @@ import StatsSection from "./StatsSectin";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-screen ">
       <div className="absolute top-0 left-0 w-full h-2/3 bg-gradient-to-b from-blue-300 via-blue-200 to-blue-100"></div>
       <div className="absolute rounded-full bg-yellow-300 w-24 h-24 top-35 right-40 shadow-yellow-200 shadow-2xl"></div>
-      <div className="absolute bottom-0 w-full h-2/5 bg-blue-400 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden">
+        <img
+          className="absolute -bottom-20 -right-70 z-20  h-auto"
+          src="rocktest1.png"
+          alt="Rock formation right"
+        />
+        <img
+          className="absolute -bottom-18 -right-20 z-10 rotate-90 h-auto"
+          src="rocktest1.png"
+          alt="Rock formation right rotated"
+        />
+        <img
+          className="absolute -bottom-35 -left-80 z-10 h-[650px] w-auto"
+          src="testpure.png"
+          alt="Left shore formation"
+        />
+      </div>
+      <div className="absolute bottom-0 w-full h-1/3 bg-blue-400 overflow-hidden">
         <Wave
           color="#3B82F6"
           heightClass="h-full"
@@ -29,22 +46,6 @@ const HeroSection: React.FC = () => {
           animationDuration="3s"
           animationDelay="2s"
         />
-
-        <img
-          className="absolute -bottom-20 -right-70 z-10  h-auto"
-          src="rocktest1.png"
-          alt="Rock formation right"
-        />
-        <img
-          className="absolute -bottom-18 -right-20 rotate-90 h-auto"
-          src="rocktest1.png"
-          alt="Rock formation right rotated"
-        />
-        <img
-          className="absolute -bottom-35 -left-80 h-[650px] w-auto"
-          src="testpure.png"
-          alt="Left shore formation"
-        />
       </div>
 
       <div className="relative z-20 h-full flex items-center justify-center text-white">
@@ -60,7 +61,7 @@ const HeroSection: React.FC = () => {
           </p>
         </div>
       </div>
-      <div className="absolute z-10 bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-1/2">
+      <div className="absolute z-20 bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-1/2">
         <StatsSection />
       </div>
     </div>

@@ -1,4 +1,5 @@
 import "./App.css";
+import Execution from "./components/Execution";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 
@@ -7,7 +8,7 @@ function App() {
     <>
       <Navbar />
       <HeroSection />
-      <div className="h-90 w-full">hello</div>
+      <Execution />
     </>
   );
 }
