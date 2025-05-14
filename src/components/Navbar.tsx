@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="fixed z-10 top-0 w-full h-24 flex justify-between items-center bg-[#021642] text-white px-16 py-3 opacity-80">
+    <nav className="fixed z-10 top-0 w-full h-24 flex justify-between items-center bg-primary text-white px-16 py-3 ">
       <div className="flex items-center">
         <div className="bg-[#e83d3d] w-10 h-10 rounded-full flex justify-center items-center mr-2">
           <img src="metalogo.png" />

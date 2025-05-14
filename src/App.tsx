@@ -7,9 +7,7 @@ function App() {
     <>
       <Navbar />
       <HeroSection />
-      <div>
-        hello
-      </div>
+      <div className="h-90 w-full">hello</div>
     </>
   );
 }

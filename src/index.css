@@ -68,7 +68,6 @@ button:focus-visible {
 } */
 @import "tailwindcss";
 @theme {
+  --color-primary: #021642;
   --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
 }
-
-

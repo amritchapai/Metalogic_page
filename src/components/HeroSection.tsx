@@ -1,12 +1,13 @@
 import React from "react";
 import Wave from "./Wave";
+import StatsSection from "./StatsSectin";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen">
       <div className="absolute top-0 left-0 w-full h-2/3 bg-gradient-to-b from-blue-300 via-blue-200 to-blue-100"></div>
       <div className="absolute rounded-full bg-yellow-300 w-24 h-24 top-35 right-40 shadow-yellow-200 shadow-2xl"></div>
-      <div className="absolute bottom-0 w-full h-1/3 bg-blue-400">
+      <div className="absolute bottom-0 w-full h-2/5 bg-blue-400 overflow-hidden">
         <Wave
           color="#3B82F6"
           heightClass="h-full"
@@ -35,7 +36,7 @@ const HeroSection: React.FC = () => {
           alt="Rock formation right"
         />
         <img
-          className="absolute -bottom-6 -right-20 rotate-90 h-auto"
+          className="absolute -bottom-18 -right-20 rotate-90 h-auto"
           src="rocktest1.png"
           alt="Rock formation right rotated"
         />
@@ -46,10 +47,8 @@ const HeroSection: React.FC = () => {
         />
       </div>
 
-      
-
       <div className="relative z-20 h-full flex items-center justify-center text-white">
-        <div className="text-center p-6 text-black bg-opacity-30 rounded-lg">
+        <div className="text-center p-6 text-primary bg-opacity-30 rounded-lg">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
             Driving innovations and empowering business
           </h1>
@@ -60,6 +59,9 @@ const HeroSection: React.FC = () => {
             in a transformative digital era.
           </p>
         </div>
+      </div>
+      <div className="absolute z-10 bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-1/2">
+        <StatsSection />
       </div>
     </div>
   );
