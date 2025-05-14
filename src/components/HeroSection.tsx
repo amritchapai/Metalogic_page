@@ -14,7 +14,7 @@ const HeroSection: React.FC = () => {
           alt="Rock formation right"
         />
         <img
-          className="absolute -bottom-18 -right-20 z-10 rotate-90 h-auto"
+          className="absolute -bottom-28 -right-20 z-10 rotate-90 h-auto"
           src="rocktest1.png"
           alt="Rock formation right rotated"
         />
@@ -49,11 +49,11 @@ const HeroSection: React.FC = () => {
       </div>
 
       <div className="relative z-20 h-full flex items-center justify-center text-white">
-        <div className="text-center p-6 text-primary bg-opacity-30 rounded-lg">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+        <div className="text-center text-primary bg-opacity-30 rounded-lg">
+          <h1 className="text-5xl md:text-5xl font-bold mb-4">
             Driving innovations and empowering business
           </h1>
-          <p className="text-xl md:text-2xl">
+          <p className="text-lg md:text-xl">
             Metalogic envisions a future where technology serves as a catalyst
             for limitless human potential,
             <br /> fostering innovation and empowering organizations to thrive
