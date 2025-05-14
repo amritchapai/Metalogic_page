@@ -1,54 +1,27 @@
-# React + TypeScript + Vite
+# Metalogic Website Redesign Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🔗 Live Demo
 
-Currently, two official plugins are available:
+[View Deployed Site](https://metalogic-page-silk.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🧑‍💻 Task Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This project is a part of the interview process for the **MERN Intern** position at **Metalogic Software Pvt. Ltd.** The task was to select a page from [Metalogic’s official website](https://www.metalogic.com.np), redesign it using modern UI/UX practices, and implement it using the specified tech stack.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎯 Why I Chose the “About Us” Page
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+While reviewing the website, I found that:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- The **hero section** of the "About Us" page was too simplistic and lacked a visual hierarchy or engaging elements.
+- The **"Distributed Team"** section was unclear — it didn't effectively communicate information about the team members or the global aspect of Metalogic's workforce.
+
+To address this, I redesigned the page with the following goals in mind:
+
+- Introduce a **visually appealing and informative hero section** with engaging copy and call-to-action.
+- Clearly showcase the **Distributed Team** section with team member profiles, descriptions, and region tags to reflect a global presence.
+
+---
