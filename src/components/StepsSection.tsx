@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../App.css";
 
-const StepsSection = () => {
+const StepsSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [activeStep, setActiveStep] = useState(-1);
 
@@ -59,16 +59,17 @@ const StepsSection = () => {
       ref={sectionRef}
       className="py-10 min-h-screen flex flex-col justify-center relative overflow-hidden"
     >
-      <div className="ml-10">
-        <h2 className="text-3xl font-bold text-red-400 mb-16">
+      <div className="ml-6 md:ml-10">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-red-400 mb-8 md:mb-16">
           Our Foundation
         </h2>
-        <h1 className="text-5xl font-bold text-primary">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">
           Bridging Futures Since 2023
         </h1>
       </div>
 
-      <div className="absolute left-1/2 transform -translate-x-1/2 w-2 bg-gray-300 h-3/4 top-36 rounded-full z-10">
+      {/* Timeline Line */}
+      <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-300 h-3/4 top-36 rounded-full z-10">
         {[0, 1, 2].map((index) => (
           <div
             key={index}
@@ -100,32 +101,32 @@ const StepsSection = () => {
       </div>
 
       <div className="container mx-auto px-4 py-14 z-20">
-        <div className="space-y-32 flex flex-col items-center">
+        <div className="space-y-20 md:space-y-32 flex flex-col items-center">
           {steps.map((step, index) => (
             <div
               key={index}
               className={`
-                relative flex items-center transition-all duration-1000
+                relative flex flex-col md:flex-row items-center transition-all duration-1000
                 ${
                   activeStep >= index
                     ? "opacity-100 translate-x-0"
                     : index % 2 === 0
-                    ? "opacity-0 -translate-x-16"
-                    : "opacity-0 translate-x-16"
+                    ? "opacity-0 -translate-x-10 md:-translate-x-16"
+                    : "opacity-0 translate-x-10 md:translate-x-16"
                 }
               `}
             >
-              <div className="z-20">
+              <div className="z-20 mb-4 md:mb-0">
                 <div
                   className={`
-                  w-16 h-16 rounded-full flex items-center justify-center text-3xl
-                  transition-all duration-700 transform
-                  ${
-                    activeStep >= index
-                      ? "bg-yellow-300 text-blue-800 shadow-lg shadow-yellow-200"
-                      : "bg-gray-300 text-gray-500"
-                  }
-                `}
+                    w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center text-2xl sm:text-3xl
+                    transition-all duration-700 transform
+                    ${
+                      activeStep >= index
+                        ? "bg-yellow-300 text-blue-800 shadow-lg shadow-yellow-200"
+                        : "bg-gray-300 text-gray-500"
+                    }
+                  `}
                 >
                   {step.icon}
                 </div>
@@ -133,15 +134,17 @@ const StepsSection = () => {
 
               <div
                 className={`
-                ml-6 p-6 bg-white rounded-lg shadow-lg w-72
-                transition-all duration-700 transform
-                ${activeStep >= index ? "scale-100" : "scale-95"}
-              `}
+                  md:ml-6 p-4 sm:p-6 bg-white rounded-lg shadow-lg w-full max-w-md
+                  transition-all duration-700 transform
+                  ${activeStep >= index ? "scale-100" : "scale-95"}
+                `}
               >
-                <h3 className="text-xl font-bold mb-2 text-blue-800">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 text-blue-800">
                   {step.title}
                 </h3>
-                <p className="text-gray-700">{step.description}</p>
+                <p className="text-sm sm:text-base text-gray-700">
+                  {step.description}
+                </p>
               </div>
             </div>
           ))}

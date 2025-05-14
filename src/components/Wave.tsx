@@ -24,19 +24,7 @@ const Wave: React.FC<WaveProps> = ({
           animationDelay: animationDelay,
         }}
       />
-      <style {...{ jsx: true, global: true }}>{`
-        @keyframes wave {
-          0%,
-          100% {
-            transform: translateY(0) scale(1.1, 1);
-            border-radius: 40% 50% 40% 50%;
-          }
-          50% {
-            transform: translateY(-20px) scale(1, 1.1);
-            border-radius: 50% 40% 50% 40%;
-          }
-        }
-      `}</style>
+      
     </div>
   );
 };
