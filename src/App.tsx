@@ -7,6 +7,9 @@ function App() {
     <>
       <Navbar />
       <HeroSection />
+      <div>
+        hello
+      </div>
     </>
   );
 }
